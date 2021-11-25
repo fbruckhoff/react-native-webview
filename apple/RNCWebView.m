@@ -1073,7 +1073,7 @@ NSString *const CUSTOM_SELECTOR = @"_CUSTOM_SELECTOR_";
         if ([origin.host isEqualToString:webView.URL.host]) {
             decisionHandler(WKPermissionDecisionGrant);
         } else {
-            WKPermissionDecision decision = _permediaCapturePermissionGrantType == RNCWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt ? WKPermissionDecisionPrompt : WKPermissionDecisionDeny;
+            WKPermissionDecision decision = _mediaCapturePermissionGrantType == RNCWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt ? WKPermissionDecisionPrompt : WKPermissionDecisionDeny;
             decisionHandler(decision);
         }
     } else if (_mediaCapturePermissionGrantType == RNCWebViewPermissionGrantType_Deny) {
